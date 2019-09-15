@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bitcoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown" translatesAutoresizingMaskIntoConstraints="NO" id="t1a-eg-aqn" userLabel="bitCoin">
+                                <rect key="frame" x="67" y="40" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1dW-iv-LJL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-Ng-IqX">
+                                <rect key="frame" x="65" y="183" width="245" height="36"/>
+                                <color key="backgroundColor" red="0.55117367100000003" green="0.99839459630000005" blue="1" alpha="0.3471335827" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Iux-zY-f0O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.66989029079999995" blue="0.50280650370000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mti-fu-om3">
+                                <rect key="frame" x="0.0" y="487" width="375" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="h6w-1u-UZP"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="R8Q-ZS-0rJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1hj-sA-OHQ"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16942167616056458" green="0.57655218620218207" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mti-fu-om3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DC7-9v-UeC"/>
+                            <constraint firstItem="bAM-Ng-IqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="Jjz-kW-Ftg"/>
+                            <constraint firstItem="Mti-fu-om3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LyD-nI-J6t"/>
+                            <constraint firstItem="t1a-eg-aqn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="MZ8-JB-5uY"/>
+                            <constraint firstItem="Mti-fu-om3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RxZ-sO-Oc5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bAM-Ng-IqX" secondAttribute="trailing" constant="65" id="Yf8-vM-OZJ"/>
+                            <constraint firstItem="t1a-eg-aqn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="YtF-PK-iyo"/>
+                            <constraint firstItem="bAM-Ng-IqX" firstAttribute="top" secondItem="t1a-eg-aqn" secondAttribute="bottom" constant="15" id="kD5-v1-Kf2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t1a-eg-aqn" secondAttribute="trailing" constant="68" id="v10-Ej-TD6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bitcoinPriceLabel" destination="bAM-Ng-IqX" id="5Fz-oy-gzb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="113.79310344827587"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Unknown" width="124" height="124"/>
+    </resources>
+</document>
